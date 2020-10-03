@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort</title>
+  </head>
+  <body>
+    <script>
+      //Sort
+      // Modifys original array
+      const items = ["Banana", "orange", "Apple", "Mango"];
+      const ratings = [92, 56, 4, 2, 22, 45.6, 10, 80];
+
+      const games = [
+        { title: "Mass Effect", rating: 9.5 },
+        { title: "League of Legends", rating: 5 },
+        { title: "Last of Us", rating: 10 },
+        { title: "God of war", rating: 10 },
+        { title: "WWE 2k20", rating: 4 }
+      ];
+
+      items.sort();
+      console.log(items); // sorts strings alphbetically
+
+      ratings.sort();
+      console.log(ratings); // sorts by first character only
+
+          // Return is negative, a is stored before b
+          // Positive b is sorted before a
+          // if they are the same or is 0 then nothing changes
+          // will modify original
+
+      //   ratings.sort(function(a,b) { // this is how numbers are sorted
+      //       return a - b;
+      //     //   return b - a;// for decending
+      //   });
+
+      // As Arrow function
+      ratings.sort((a, b) => a - b);
+
+      console.log(ratings);
+
+      games.sort((a,b) => a.rating - b.rating); // go inside object and look at a specific value
+        console.log(games);
+
+    </script>
+  </body>
+</html>
